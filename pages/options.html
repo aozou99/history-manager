@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History Trimer | Options</title>
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="/lib/jquery-3.7.0.min.js"></script>
+  <script src="/lib/jquery.loadTemplate.min.js"></script>
+  <script type="text/html" id="template-domain">
+    <li class="flex p-2 items-center hover:bg-sky-50 rounded-lg">
+      <img data-src="favicon" class="favicon" src="" style="width: 16px; height: 16px; margin-right: 8px;">
+      <p data-content="domain" class="w-full"></p>
+      <button
+        class="delete-btn py-2 px-4 rounded"
+        data-template-bind='[{"attribute": "data-domain", "value": "domain"}]'
+      >
+        <svg class="h-5 w-5 text-red-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <polyline points="3 6 5 6 21 6" />  <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />  <line x1="10" y1="11" x2="10" y2="17" />  <line x1="14" y1="11" x2="14" y2="17" /></svg>
+      </button>
+    </li>
+  </script>
+</head>
+<body style="font-size: inherit; font-family: inherit;" class="bg-emerald-50">
+  <main class="md:container md:mx-auto">
+    <div class="h-100 w-full flex items-center justify-center bg-teal-lightest font-sans">
+      <div class="bg-white rounded shadow p-6 m-4 w-full lg:w-3/4 lg:max-w-lg">
+            <div class="mb-4">
+                <h1 class="text-2xl font-medium leading-tight">Domains not saved in history</h1>
+                <div class="flex mt-4">
+                    <input id="domain" class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker" placeholder="example.com">
+                    <button id="register-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add</button>
+                </div>
+            </div>
+            <hr class="h-px my-6 bg-gray-200 border-0 dark:bg-gray-700">
+            <ul id="registerd-domains"></ul>
+        </div>
+    </div>
+  </main>
+  <script src="/src/options.js"></script>
+</body>
+</html>
