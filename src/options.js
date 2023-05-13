@@ -3,20 +3,15 @@ import {
   registerDomain,
   deleteDomain,
 } from "./modules/repository/domain.js";
+import { isValidDomain } from "./modules/validator/domain.js";
 
-const isValidDomain = async (domain) => {
-  try {
-    new URL(`https://${domain}/`);
-    return true;
-  } catch (err) {
-    return false;
-  }
-};
+const NO_REFRESH = "no-refresh";
 
 const handle = (callback) => {
   return async (e) => {
-    await callback(e);
-    await render();
+    if ((await callback(e)) !== NO_REFRESH) {
+      await refresh();
+    }
   };
 };
 const handleDeleteClick = handle(async (e) => {
@@ -27,7 +22,8 @@ const handleRegisterBtnClick = handle(async () => {
   const domain = $("input#domain").val();
   const isValid = await isValidDomain(domain);
   if (!isValid) {
-    return alert("Incorrect format of entered domain");
+    alert("Incorrect format of entered domain");
+    return NO_REFRESH;
   }
   await registerDomain(domain);
 });
@@ -41,9 +37,9 @@ const setEvent = () => {
   $(".favicon").on("error", alterFavicon);
 };
 
-const render = async () => {
+const refresh = async () => {
   await loadRegisteredDomains();
   setEvent();
 };
 
-$(render);
+$(refresh);
