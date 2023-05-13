@@ -11,14 +11,5 @@
   "options_page": "./pages/options.html",
   "action": {
     "default_icon": "assets/icon.png"
-  },
-  "commands": {
-    "_execute_action": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+H",
-        "mac": "MacCtrl+Shift+H"
-      },
-      "description": "Run extension."
-    }
   }
 }

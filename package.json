@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "tw:watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "prepare": "husky install"
+    "tw:watch": "tailwindcss -i tailwind.in.css -o ./src/tailwind.out.css --watch",
+    "prepare": "husky install",
+    "build": "zip -r dist/hisotry-trimer.zip assets lib pages src manifest.json"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"

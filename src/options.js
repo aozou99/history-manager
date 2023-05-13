@@ -45,9 +45,7 @@ const setEvent = () => {
   $(".delete-btn").click(handleDeleteClick);
   $("#register-btn").click(handleRegisterBtnClick);
   $(".favicon").on("error", alterFavicon);
-  $("#domain").autocomplete({
-    source: suggestFromHistory,
-  });
+  $("#domain").autocomplete({ source: suggestFromHistory });
 };
 
 const refresh = async () => {
