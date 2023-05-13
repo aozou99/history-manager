@@ -2,7 +2,7 @@ export const loadRegisteredDomains = async () => {
   const { domains } = await chrome.storage.local.get(null);
   $("#registerd-domains").loadTemplate(
     "/pages/templates/domain-items.html",
-    domains,
+    domains || [],
     {
       async: false,
     }
