@@ -23,6 +23,9 @@ const handleDeleteClick = handle(async (e) => {
 
 const handleRegisterBtnClick = handle(async () => {
   const domain = $("input#domain").val();
+  if (!domain) {
+    return NO_REFRESH;
+  }
   const isValid = await isValidDomain(domain);
   if (!isValid) {
     alert("Incorrect format of entered domain");
@@ -42,6 +45,9 @@ const suggestFromHistory = async (req, res) => {
 };
 
 const setEvent = () => {
+  $("#domain").keyup((e) => {
+    if (e.which === 13) $("#register-btn").click();
+  });
   $(".delete-btn").click(handleDeleteClick);
   $("#register-btn").click(handleRegisterBtnClick);
   $(".favicon").on("error", alterFavicon);
