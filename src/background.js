@@ -1,13 +1,8 @@
-const dt = new Date();
-dt.setFullYear(dt.getFullYear() - 1);
+import { search } from "../src/modules/repository/history.js";
 
-const deleteByKeyword = async ({ domain }) => {
-  const targets = await chrome.history.search({
-    text: domain,
-    startTime: dt.getTime(),
-    maxResults: 10 ** 8,
-  });
-  targets.forEach(async (t) => {
+const deleteByDomain = async ({ domain }) => {
+  const targets = await search(domain);
+  targets?.forEach(async (t) => {
     chrome.history.deleteUrl({
       url: t.url,
     });
@@ -19,7 +14,7 @@ const main = async () => {
   if (!domains) {
     return;
   }
-  domains.forEach(deleteByKeyword);
+  domains.forEach(deleteByDomain);
 };
 
 main();

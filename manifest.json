@@ -3,9 +3,10 @@
   "description": "It will remove the specified domain from your browser's search history so that it does not remain in your browser's search history",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["activeTab", "scripting", "storage", "history"],
+  "permissions": ["scripting", "storage", "history"],
   "background": {
-    "service_worker": "./src/background.js"
+    "service_worker": "./src/background.js",
+    "type": "module"
   },
   "options_page": "./pages/options.html",
   "action": {
