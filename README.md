@@ -1,10 +1,13 @@
 # History Trimmer
 
 This is a chrome extension to manage your browser search history.
+Please 
 
 <img width="320" alt="capture1" src="https://github.com/aozou99/history-trimmer/assets/21310288/abd4ab10-cb1a-4104-8913-0ae0a4d171e4">
 <img width="320" alt="capture2" src="https://github.com/aozou99/history-trimmer/assets/21310288/1118cb98-44f4-405d-8d62-042912823500">
 
+## Install
+Please install from [chrome webstore](https://chrome.google.com/webstore/detail/history-trimer/cdmacgacnnldaeikoeomojfenpbhohdm/).
 
 ## About the Functionality
 
