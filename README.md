@@ -10,16 +10,9 @@ This is an add-on to manage your browser search history
 
 ## Development
 
-### init
-
-```sh
+```
 $ npm install
-```
-
-### tailwind
-
-```
-$ npm run tw:watch
+$ npm run dev
 ```
 
 ### Loading an unpacked extension

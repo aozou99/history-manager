@@ -2,7 +2,7 @@ import { Modal } from "flowbite";
 import { updateDomain } from "../repository/domain";
 import { alterFavicon } from "../error/handle";
 
-const settingItems = [{ key: "history" }, { key: "cookie" }, { key: "cache" }];
+const settingItems = [{ key: "history" }, { key: "cookies" }, { key: "cache" }];
 
 export const openModal = (selector, domain) => {
   $(selector).loadTemplate(

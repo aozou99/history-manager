@@ -1,13 +1,13 @@
 {
   "scripts": {
+    "prepare": "husky install",
     "dev": "run-p dev:*",
     "dev:webpack": "webpack --watch",
     "dev:tw": "tailwindcss -i tailwind.in.css -o ./src/tailwind.out.css --watch",
-    "prepare": "husky install",
     "build": "run-s -c build:*",
     "build:tw": "tailwindcss -i tailwind.in.css -o ./src/tailwind.out.css",
     "build:webpack": "webpack --mode production",
-    "build:pack": "zip -r dist/hisotry-trimer.zip assets lib pages src manifest.json"
+    "build:pack": "zip -r dist/hisotry-trimmer.zip assets lib pages src manifest.json"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
