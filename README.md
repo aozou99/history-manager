@@ -11,7 +11,7 @@ This is a chrome extension to manage your browser search history.
 1. The extension automatically removes browser search history, cookies, and cache for sites from specified domains.
 1. With options_pages, you can manage (add or remove) target domains.
 
-## Needs this Functionality Fulfills:
+## Needs this Functionality Fulfills
 
 ### Privacy Protection
 The feature that automatically removes the search history of specified domains is a powerful tool for protecting user privacy. It is useful when you do not want others to know your usage history of certain sites or when you do not want to share personal information online.
