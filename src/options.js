@@ -36,6 +36,7 @@ const handleRegisterBtnClick = handle(async () => {
     return NO_REFRESH;
   }
   await registerDomain(domain);
+  $("input#domain").val("");
 });
 
 const suggestFromHistory = async (req, res) => {
