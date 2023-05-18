@@ -35,7 +35,7 @@ const handleRegisterBtnClick = handle(async () => {
     alert("Incorrect format of entered domain");
     return NO_REFRESH;
   }
-  await registerDomain(domain);
+  await registerDomain(domain.trim());
   $("input#domain").val("");
 });
 
