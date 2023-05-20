@@ -1,7 +1,7 @@
 {
   "name": "History Trimer",
   "description": "It will remove the specified domain from your browser's search history so that it does not remain in your browser's search history",
-  "version": "1.1",
+  "version": "1.2",
   "manifest_version": 3,
   "permissions": ["storage", "history", "browsingData"],
   "background": {
